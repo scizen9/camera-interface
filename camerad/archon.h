@@ -107,15 +107,6 @@ namespace Archon {
       bool modeselected;                     //!< true if a valid mode has been selected, false otherwise
       bool firmwareloaded;                   //!< true if firmware is loaded, false otherwise
       bool is_longexposure;                  //!< true for long exposure mode (exptime in sec), false for exptime in msec
-      bool is_window;                        //!< true if in window mode for h2rg, false if not
-
-      int win_hstart;
-      int win_hstop;
-      int win_vstart;
-      int win_vstop;
-
-      int taplines_store;                   //!< int number of original taplines
-      std::string tapline0_store;           //!< store tapline0 for window mode so can restore later
 
       bool lastcubeamps;
 
@@ -193,14 +184,8 @@ namespace Archon {
       template <class T> long get_configmap_value(std::string key_in, T& value_out);
       void add_filename_key();
       long expose(std::string nseq_in);
-      long hexpose(std::string nseq_in);
-      long hsetup();
-      long hroi(std::string geom_in, std::string &retstring);
-      long hwindow(std::string state_in, std::string &state_out);
-      long video();
       long wait_for_exposure();
       long wait_for_readout();
-      long hwait_for_readout();
       long get_parameter(std::string parameter, std::string &retstring);
       long set_parameter( std::string parameter, long value );
       long set_parameter(std::string parameter);
@@ -217,7 +202,6 @@ namespace Archon {
       long inreg( std::string args );
       long region_of_interest( std::string args, std::string &retstring );
       long test(std::string args, std::string &retstring);
-      long nlines(std::string count, std::string &retstring);
 
       /**
        * @var     struct geometry_t geometry[]
