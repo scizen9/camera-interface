@@ -9,6 +9,8 @@
 # ----------------------------------------------------------------------------
 set(INTERFACE_TYPE "Archon")
 #set(INTERFACE_TYPE "AstroCam")
+set(DETECTOR_TYPE "H2RG")
+#set(DETECTOR_TYPE "CCD")
 # ----------------------------------------------------------------------------
 
 # un-comment the following to log verbose debug messages
