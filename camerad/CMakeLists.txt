@@ -63,10 +63,12 @@ if (${INTERFACE_TYPE} STREQUAL "AstroCam")
 # ----------------------------------------------------------------------------
 
 elseif(${INTERFACE_TYPE} STREQUAL "Archon")
-        message(STATUS "compiling for STA Archon")
-        set(INTERFACE_TARGET archon)
-        add_definitions( -Wall -ansi -O2 -Wno-variadic-macros -std=c++11 -ggdb )
-        add_definitions(-DSTA_ARCHON)
+    message(STATUS "compiling for STA Archon")
+    set(INTERFACE_TARGET archon)
+    add_definitions( -Wall -ansi -O2 -Wno-variadic-macros -std=c++11 -ggdb )
+    add_definitions(-DSTA_ARCHON)
+    if(${DETECTOR_TYPE} STREQUAL "CCD")
+        message(STATUS "compiling for CCD")
         list(APPEND INTERFACE_SOURCE
                 "${CAMERA_DIR}/generic.cpp"
                 "${CAMERA_DIR}/archon.cpp"
@@ -75,6 +77,16 @@ elseif(${INTERFACE_TYPE} STREQUAL "Archon")
                 "${ARCHON_INCLUDE}"
                 )
         add_library( interface STATIC "${INTERFACE_SOURCE}" )
+    elseif (${DETECTOR_TYPE} STREQUAL "H2RG")
+        message(STATUS "compiling for H2RG")
+        list(APPEND INTERFACE_SOURCE
+                "${CAMERA_DIR}/generic.cpp"
+                "${CAMERA_DIR}/archon.cpp"
+                "${CAMERA_DIR}/h2rg.cpp"
+            )
+        list(APPEND INTERFACE_INCLUDES
+                "${H2RG_INCLUDE}"
+            )
 else()
         message(FATAL_ERROR " unknown interface type: " ${INTERFACE_TYPE})
 endif()
