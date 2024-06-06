@@ -87,6 +87,7 @@ elseif(${INTERFACE_TYPE} STREQUAL "Archon")
         list(APPEND INTERFACE_INCLUDES
                 "${H2RG_INCLUDE}"
             )
+    endif ()
 else()
         message(FATAL_ERROR " unknown interface type: " ${INTERFACE_TYPE})
 endif()

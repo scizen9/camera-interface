@@ -5,7 +5,7 @@
  * @author  David Hale <dhale@astro.caltech.edu>
  *
  */
-#include "archon.h"
+#include "h2rg.h"
 
 #include <sstream>   // for std::stringstream
 #include <iomanip>   // for setfil, setw, etc.
