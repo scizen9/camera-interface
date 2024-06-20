@@ -68,7 +68,6 @@ elseif(${INTERFACE_TYPE} STREQUAL "Archon")
         add_definitions( -Wall -ansi -O2 -Wno-variadic-macros -std=c++11 -ggdb )
         add_definitions(-DSTA_ARCHON)
         list(APPEND INTERFACE_SOURCE
-                "${CAMERA_DIR}/generic.cpp"
                 "${CAMERA_DIR}/archon.cpp"
                 )
         list(APPEND INTERFACE_INCLUDES

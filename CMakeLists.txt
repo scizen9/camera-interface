@@ -13,7 +13,6 @@ set(INTERFACE_TYPE "Archon")
 
 # un-comment the following to log verbose debug messages
 #add_definitions(-DLOGLEVEL_DEBUG)
-add_definitions(-I/usr/local/include)
 
 cmake_minimum_required( VERSION 3.12 )
 
