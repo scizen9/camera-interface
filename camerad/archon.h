@@ -6,8 +6,6 @@
  *
  */
 #pragma once
-#ifndef ARCHON_H
-#define ARCHON_H
 
 #include <CCfits/CCfits>           //!< needed here for types in set_axes()
 #include <atomic>
@@ -365,5 +363,3 @@ namespace Archon {
   };
 
 }
-
-#endif

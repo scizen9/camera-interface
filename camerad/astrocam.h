@@ -8,8 +8,7 @@
  * ARC-64 PCI and ARC-66 PCIe.
  *
  */
-#ifndef ASTROCAM_H
-#define ASTROCAM_H
+#pragma once
 
 #include <CCfits/CCfits>           //!< needed here for types in set_axes()
 #include <atomic>
@@ -631,5 +630,3 @@ namespace AstroCam {
   };
 
 }
-
-#endif

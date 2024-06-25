@@ -129,16 +129,6 @@ namespace AstroCam {
 
 
   /** AstroCam::Interface::Interface ******************************************/
-  /**
-   * @fn     ~Interface
-   * @brief  class deconstructor
-   * @param  none
-   * @return none
-   *
-   */
-  Interface::~Interface() {
-  }
-  /** AstroCam::Interface::Interface ******************************************/
 
 
   /** AstroCam::Interface::interface ******************************************/
