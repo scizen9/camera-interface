@@ -5854,7 +5854,7 @@ namespace Archon {
 
     // Now write those parameters to the Archon
     //
-    for ( auto trig : trigger ) {
+    for ( const auto &trig : trigger ) {
       if ( error == NO_ERROR ) error = this->set_parameter( trig.param, trig.value );
     }
 
@@ -6690,7 +6690,7 @@ namespace Archon {
     //
     std::string value;
     std::stringstream retss;
-    for ( auto key : heaterconfig ) {
+    for ( const auto &key : heaterconfig ) {
 
       error = this->get_configmap_value( key, value );
 
@@ -7629,7 +7629,7 @@ namespace Archon {
         // Log all installed modules
       logwrite( function, "installed module types: " );
       message.str("");
-      for ( auto mod : this->modtype ) {
+      for ( const auto &mod : this->modtype ) {
         message << mod << " ";
       }
       logwrite( function, message.str() );
