@@ -2929,7 +2929,7 @@ namespace Archon {
 /***
     // Check that image buffer is prepared  //TODO should I call prepare_image_buffer() here, automatically?
     //
-    if ( (this->image_data == nullptr)    ||
+    if ( (this->image_data == nullptr) ||
          (this->image_data_bytes == 0) ) {
       this->camera.log_error( function, "image buffer not ready" );
 //    return ERROR;
