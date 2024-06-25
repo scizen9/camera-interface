@@ -5,6 +5,7 @@
  * @author  David Hale <dhale@astro.caltech.edu>
  *
  */
+#pragma once
 #ifndef ARCHON_H
 #define ARCHON_H
 

@@ -1870,9 +1870,9 @@ namespace Archon {
 
     #ifdef LOGLEVEL_DEBUG
     int ext=0;
-    for ( auto sec : this->camera_info.amp_section ) {
+    for ( const auto &sec : this->camera_info.amp_section ) {
       message.str(""); message << "[DEBUG] extension " << ext++ << ":";
-      for ( auto xy : sec ) {
+      for ( const auto &xy : sec ) {
         message << " " << xy;
       }
       logwrite( function, message.str() );
@@ -2929,7 +2929,7 @@ namespace Archon {
 /***
     // Check that image buffer is prepared  //TODO should I call prepare_image_buffer() here, automatically?
     //
-    if ( (this->image_data == NULL)    ||
+    if ( (this->image_data == nullptr)    ||
          (this->image_data_bytes == 0) ) {
       this->camera.log_error( function, "image buffer not ready" );
 //    return ERROR;
@@ -3564,7 +3564,7 @@ namespace Archon {
   long Interface::write_parameter( const char *paramname, int newvalue, bool &changed ) {
     std::stringstream newvaluestr;
     newvaluestr << newvalue;
-    return ( write_parameter(paramname, newvaluestr.str().c_str(), changed) );
+    return( write_parameter(paramname, newvaluestr.str().c_str(), changed) );
   }
 
   long Interface::write_parameter( const char *paramname, const char *newvalue ) {
@@ -3576,7 +3576,7 @@ namespace Archon {
     bool dontcare = false;
     std::stringstream newvaluestr;
     newvaluestr << newvalue;
-    return ( write_parameter(paramname, newvaluestr.str().c_str(), dontcare) );
+    return( write_parameter(paramname, newvaluestr.str().c_str(), dontcare) );
   }
   /**************** Archon::Interface::write_parameter ************************/
 
