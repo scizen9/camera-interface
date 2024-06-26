@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef COMMON_H
-#define COMMON_H
+#pragma once
 
 #include <sstream>
 #include <queue>
@@ -119,4 +118,3 @@ namespace Common {
   /**************** Common::Queue *********************************************/
 
 }
-#endif
