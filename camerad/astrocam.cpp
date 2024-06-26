@@ -128,9 +128,6 @@ namespace AstroCam {
   /** AstroCam::Interface::Interface ******************************************/
 
 
-  /** AstroCam::Interface::Interface ******************************************/
-
-
   /** AstroCam::Interface::interface ******************************************/
   /**
    * @fn     interface
